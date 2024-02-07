@@ -3,8 +3,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "PosePicker",
-  description: "포토부스에서 고민하는 당신을 위한 포즈추천 서비스",
+  title: "Ewha Chain",
+  description: "이화여자대학교 블록체인 학회",
 };
 
 export default function RootLayout({
