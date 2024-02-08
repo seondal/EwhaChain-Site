@@ -9,6 +9,12 @@ export default function Page() {
           <a href={`mailto:${Contact.email}`}>{Contact.email}</a>
         </li>
         <li>
+          개인 이메일 :
+          <a href={`mailto:${Contact.personal_email}`}>
+            {Contact.personal_email}
+          </a>
+        </li>
+        <li>
           <a href={Contact.instagram}>Instagram</a>
         </li>
         <li>
