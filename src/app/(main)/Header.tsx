@@ -9,7 +9,7 @@ export default function Header() {
   const path = usePathname();
 
   return (
-    <header className="flex justify-between px-8 h-12 items-center fixed inset-x-0 top-0 bg-white">
+    <header className="flex justify-between px-8 h-16 items-center fixed inset-x-0 top-0 bg-white">
       <Link href="/" className="flex gap-2">
         <Image src="/image/logo.png" width={40} height={30} alt="" />
         <h1 className="text-xl font-extrabold text-ewhagreen">EWHA-CHAIN</h1>
