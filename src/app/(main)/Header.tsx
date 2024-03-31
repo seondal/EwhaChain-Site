@@ -1,37 +1,28 @@
+"use client";
+
 import MenuContent from "@/constants/Menu";
+import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const path = usePathname();
+
   return (
-    <header className="flex justify-between">
-      <h1>
-        <Link href="/">Ewha Chain</Link>
-      </h1>
-      <nav className="flex">
+    <header className="flex justify-between px-8 h-12 items-center fixed inset-x-0 top-0 bg-white">
+      <Link href="/" className="flex gap-2">
+        <Image src="/image/logo.png" width={40} height={30} alt="" />
+        <h1 className="text-xl font-extrabold text-ewhagreen">EWHA-CHAIN</h1>
+      </Link>
+      <nav className="flex font-medium gap-8">
         {MenuContent.map((menu) => (
-          <li
-            key={menu.page}
-            className="flex relative justify-center px-4 items-center group cursor-pointer w-20">
-            {"detail" in menu ? (
-              <>
-                <h5>{menu.page}</h5>
-                <div className="w-24 absolute top-16 hidden group-hover:block bg-slate-400 rounded text-center">
-                  {menu.detail.map((detail) => (
-                    <Link
-                      key={detail.page}
-                      href={detail.link}
-                      className="hover:text-white">
-                      <h5>{detail.page}</h5>
-                    </Link>
-                  ))}
-                </div>
-              </>
+          <Link key={menu.page} href={menu.link} className="">
+            {path === menu.link ? (
+              <h5 className="font-bold">{menu.page}</h5>
             ) : (
-              <Link href={menu.link} className="rounded hover:bg-slate-400">
-                <h5>{menu.page}</h5>
-              </Link>
+              <h5>{menu.page}</h5>
             )}
-          </li>
+          </Link>
         ))}
       </nav>
     </header>
