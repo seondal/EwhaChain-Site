@@ -1,6 +1,7 @@
 import Header from "@/app/(main)/Header";
 import "./globals.css";
 import type { Metadata } from "next";
+import Footer from "./(main)/Footer";
 
 export const metadata: Metadata = {
   title: "Ewha Chain",
@@ -16,8 +17,8 @@ export default function RootLayout({
     <html lang="kor">
       <body>
         <Header />
-        <main> {children}</main>
-        <footer></footer>
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
