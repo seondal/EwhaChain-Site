@@ -1,3 +1,4 @@
+import MainContents from "@/constants/MainContents";
 import Image from "next/image";
 
 export default function Home() {
@@ -44,14 +45,38 @@ export default function Home() {
         </div>
         <div className="flex flex-col items-center gap-4 text-center py-9">
           <button className="bg-brand-silver text-brand-primary py-2 px-4 rounded-lg">
-            학회소개집(Kor) 보러가기 ->
+            {`학회소개집(Kor) 보러가기 ->`}
           </button>
           <button className="bg-brand-silver text-brand-primary py-2 px-4 rounded-lg">
-            학회소개집(Eng) 보러가기 ->
+            {`학회소개집(Eng) 보러가기 ->`}
           </button>
         </div>
       </div>
-      <div>내용</div>
+      <div className="flex">
+        <div className="px-8">
+          <b>On This Page</b>목차목차목차
+        </div>
+        {/* 본문 */}
+        <div className="grow from-linear-content1 to-linear-content3 bg-gradient-to-br text-white text-center p-12">
+          <div>
+            <h4>핵심 가치</h4>
+            <div className="flex justify-evenly my-12">
+              {MainContents.value.map((item) => (
+                <div
+                  key={item.keyword}
+                  className="flex flex-1 flex-col items-center gap-6">
+                  <div className="flex justify-center items-center bg-black text-brand-primary rounded-full size-36">
+                    <div className="font-medium text-xl">{item.keyword}</div>
+                  </div>
+                  <div className="whitespace-pre-wrap">{item.explain}</div>
+                </div>
+              ))}
+            </div>
+
+            <h4>커리큘럼</h4>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

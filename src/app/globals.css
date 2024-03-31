@@ -39,6 +39,13 @@
 
 @font-face {
     font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Extrabold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
@@ -47,6 +54,11 @@
 :root {
     font-family: 'Pretendard';
     font-size: 16px;
+}
+
+h4 {
+    font-weight: 800;
+    font-size: 1.5rem;
 }
 
 button {
