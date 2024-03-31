@@ -9,7 +9,7 @@ interface ContactButtonI {
 function ContactButton({ icon, link }: ContactButtonI) {
   return (
     <Link href={link}>
-      <div className="p-2 bg-white/10 rounded-full relative w-8 h-8">
+      <div className="p-2 bg-white/10 rounded-full relative size-8">
         <Image src={icon} alt="" width={16} height={16} />
       </div>
     </Link>

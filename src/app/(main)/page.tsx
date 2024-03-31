@@ -58,7 +58,7 @@ export default function Home() {
         </div>
         {/* 본문 */}
         <div className="grow from-linear-content1 to-linear-content3 bg-gradient-to-br text-white text-center p-12">
-          <div>
+          <div className="mb-32">
             <h4>핵심 가치</h4>
             <div className="flex justify-evenly my-12">
               {MainContents.value.map((item) => (
@@ -72,8 +72,26 @@ export default function Home() {
                 </div>
               ))}
             </div>
-
+          </div>
+          <div className="mb-32">
             <h4>커리큘럼</h4>
+            <div className="flex flex-wrap gap-9 justify-center my-12">
+              {MainContents.curriculum.map((item) => (
+                <div
+                  key={item.keyword}
+                  className="flex flex-col items-center gap-2 py-4 bg-white rounded-md w-80">
+                  <div className="bg-brand-primary rounded-full size-10 p-2">
+                    <Image src={item.icon} alt="" width={25} height={25} />
+                  </div>
+                  <div className="font-bold text-lg text-black">
+                    {item.keyword}
+                  </div>
+                  <div className="text-sm text-gray-700 whitespace-pre-wrap">
+                    {item.explain}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
