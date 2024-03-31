@@ -60,7 +60,7 @@ export default function Home() {
         </div>
       </div>
       {/* 학회 소개집 */}
-      <div className="p-10 ">
+      <div className="p-10">
         <div className="text-center text-ewhagreen text-2xl font-medium leading-normal">
           이화체인은
           <br />
@@ -80,8 +80,10 @@ export default function Home() {
         </div>
       </div>
       <div className="flex">
-        <div className="px-8">
-          <b>On This Page</b>목차목차목차
+        <div className="px-8 relative">
+          <div className="sticky top-0">
+            <b>On This Page</b>목차목차목차
+          </div>
         </div>
         {/* 본문 */}
         <div className="grow from-linear-content1 to-linear-content3 bg-gradient-to-br text-white text-center p-12">
