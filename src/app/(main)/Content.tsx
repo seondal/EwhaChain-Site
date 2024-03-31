@@ -43,16 +43,30 @@ export default function Content() {
 
   return (
     <div className="flex">
-      <div className="px-8 w-96 relative">
+      <div className="px-8 w-80 relative">
         {/* 목차 */}
         <div className="sticky top-16">
           <b>On This Page</b>
           <nav>
-            <ul className="*:py-2">
-              <li onClick={() => scrollToSection(refValue)}>핵심 가치</li>
-              <li onClick={() => scrollToSection(refCurriculum)}>커리큘럼</li>
-              <li onClick={() => scrollToSection(refAcvitivy)}>역대 활동</li>
-              <li onClick={() => scrollToSection(refResult)}>
+            <ul className="*:py-2 *:cursor-pointer">
+              <li
+                className="hover:text-brand-primary"
+                onClick={() => scrollToSection(refValue)}>
+                핵심 가치
+              </li>
+              <li
+                className="hover:text-brand-primary"
+                onClick={() => scrollToSection(refCurriculum)}>
+                커리큘럼
+              </li>
+              <li
+                className="hover:text-brand-primary"
+                onClick={() => scrollToSection(refAcvitivy)}>
+                역대 활동
+              </li>
+              <li
+                className="hover:text-brand-primary"
+                onClick={() => scrollToSection(refResult)}>
                 성과 및 수상 내역
               </li>
             </ul>
