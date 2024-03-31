@@ -1,6 +1,33 @@
 import MainContents from "@/constants/MainContents";
 import Image from "next/image";
 
+const mock = [
+  {
+    year: 2023,
+    list: [
+      "Solana Grizzlython University Honorable Mentions",
+      "2023 LBankLabs Summer Bootcamp Finalist",
+      "국내 가상 자산 거래소 Korbit과 ‘ICE-CHAIN’ NFT 발행 행사 주최",
+    ],
+  },
+  {
+    year: 2022,
+    list: [
+      "HackAtom Seoul Juno Track 3rd Prize",
+      "Polygon BUIDL IT: Summer 2022 Prize Pool",
+      "Klaymakers22 DAO Track 2nd Prize",
+    ],
+  },
+  {
+    year: 2021,
+    list: [
+      "Solana Grizzlython University Honorable Mentions",
+      "2023 LBankLabs Summer Bootcamp Finalist",
+      "국내 가상 자산 거래소 Korbit과 ‘ICE-CHAIN’ NFT 발행 행사 주최",
+    ],
+  },
+];
+
 export default function Home() {
   return (
     <div>
@@ -97,7 +124,7 @@ export default function Home() {
             <h4>역대 활동</h4>
             <div className="flex justify-around my-12">
               {[1, 2, 3].map((item) => (
-                <div className="relative">
+                <div className="relative" key={item}>
                   <div>
                     <Image
                       src="/image/dummy.png"
@@ -116,6 +143,22 @@ export default function Home() {
                       <div className="text-brand-primary">{`상세보기 ->`}</div>
                     </div>
                   </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-col items-center mb-32">
+            <h4>성과 및 수상 내역</h4>
+            <div className="my-12">
+              {mock.map((item) => (
+                <div key={item.year} className="flex text-lg">
+                  <b className="w-12">{item.year}</b>
+                  <ul className="text-left border-l-2 pl-7 ml-7">
+                    {item.list.map((content, idx) => (
+                      <li key={idx}>{content}</li>
+                    ))}
+                    <br />
+                  </ul>
                 </div>
               ))}
             </div>
