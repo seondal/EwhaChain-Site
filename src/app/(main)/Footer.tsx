@@ -30,7 +30,7 @@ export default function Footer() {
         <b className="text-base">Contact</b>
         <div>ewha.chain@gmail.com</div>
         <div className="flex justify-between py-5">
-          <ContactButton icon={""} link={Contact.email} />
+          <ContactButton icon={""} link={`mailto:${Contact.email}`} />
           <ContactButton icon={"/icon/twitter.svg"} link={Contact.twitter} />
           <ContactButton
             icon={"/icon/instagram.svg"}
