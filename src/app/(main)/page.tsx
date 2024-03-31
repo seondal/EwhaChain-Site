@@ -60,7 +60,7 @@ export default function Home() {
         <div className="grow from-linear-content1 to-linear-content3 bg-gradient-to-br text-white text-center p-12">
           <div className="mb-32">
             <h4>핵심 가치</h4>
-            <div className="flex justify-evenly my-12">
+            <div className="flex justify-around my-12">
               {MainContents.value.map((item) => (
                 <div
                   key={item.keyword}
@@ -88,6 +88,33 @@ export default function Home() {
                   </div>
                   <div className="text-sm text-gray-700 whitespace-pre-wrap">
                     {item.explain}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="mb-32">
+            <h4>역대 활동</h4>
+            <div className="flex justify-around my-12">
+              {[1, 2, 3].map((item) => (
+                <div className="relative">
+                  <div>
+                    <Image
+                      src="/image/dummy.png"
+                      alt=""
+                      width={200}
+                      height={200}
+                    />
+                  </div>
+                  <div className="absolute bottom-0 inset-x-0 flex justify-center mb-[-40px]">
+                    <div
+                      key={item}
+                      className="flex flex-col justify-center gap-3 bg-white rounded-xl w-44 h-20 font-semibold">
+                      <div className="text-gray-700">
+                        12기 아이디어톤 : DeFi
+                      </div>
+                      <div className="text-brand-primary">{`상세보기 ->`}</div>
+                    </div>
                   </div>
                 </div>
               ))}
