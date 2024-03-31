@@ -10,6 +10,10 @@ module.exports = {
       colors: {
         footer: "#263238",
         ewhagreen: "#004D2C",
+        brand: {
+          silver: "#F5F7FA",
+          primary: "#4CAF4F",
+        },
         linear: {
           banner1: "#142D3E",
           banner2: "#15F231",
